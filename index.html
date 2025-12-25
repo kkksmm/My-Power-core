@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power-Core GYM</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🏋️ <span>Power-Core</span> GYM</div>
+  <nav>
+    <a href="#workout">Workout</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#booking">Booking</a>
+  </nav>
+</header>
+
+<section id="workout" class="section">
+  <h1>Gym Workout Guide</h1>
+
+  <div class="buttons">
+    <button class="active" onclick="changeWorkout('chest',this)">Chest</button>
+    <button onclick="changeWorkout('back',this)">Back</button>
+    <button onclick="changeWorkout('legs',this)">Legs</button>
+    <button onclick="changeWorkout('shoulders',this)">Shoulders</button>
+    <button onclick="changeWorkout('arms',this)">Arms</button>
+  </div>
+
+  <div class="video-box">
+    <video id="workoutVideo" controls autoplay muted></video>
+  </div>
+
+  <div class="content" id="workoutContent"></div>
+</section>
+
+<section id="trainers" class="section">
+  <h1>Our Trainers</h1>
+
+  <div class="trainers">
+    <div class="trainer-card"><h3>Dv Patel</h3><p>Chest Trainer<br><br>3000 / per 3 month</p></div>
+    <div class="trainer-card"><h3>Suresh Patel</h3><p>Back Trainer<br><br>2500 / per 3 month</p></div>
+    <div class="trainer-card"><h3>Rahul Verma</h3><p>Legs Trainer<br><br>5000 / per 3 month</p></div>
+    <div class="trainer-card"><h3>Vishv Patel</h3><p>Shoulders Trainer<br><br>2800 / per 3 month</p></div>
+    <div class="trainer-card"><h3>Rj Rank</h3><p>Arms Trainer<br><br>4000 / per 3 month</p></div>
+  </div>
+</section>
+
+<section id="booking" class="section">
+  <h1>Book Your Training</h1>
+
+  <div class="booking" id="bookingForm">
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="mobile" placeholder="Mobile">
+    <input id="dob" type="date">
+    <input id="weight" placeholder="Weight (kg)">
+    <input id="height" placeholder="Height (cm)">
+    <input id="address" placeholder="Address">
+
+    <label>Select Timing Slot</label>
+    <div class="slots">
+      <button type="button" onclick="selectSlot(this)">5–6 AM</button>
+      <button type="button" onclick="selectSlot(this)">6–7 AM</button>
+      <button type="button" onclick="selectSlot(this)">7–8 AM</button>
+      <button type="button" onclick="selectSlot(this)">6–7 PM</button>
+      <button type="button" onclick="selectSlot(this)">7–8 PM</button>
+    </div>
+
+    <select id="trainer">
+      <option>Select Trainer</option>
+      <option>Dv Patel</option>
+      <option>Suresh Patel</option>
+      <option>Rahul Verma</option>
+      <option>Vishv Patel</option>
+      <option>Rj Rank</option>
+    </select>
+
+    <button onclick="openQR()">Proceed to Payment</button>
+  </div>
+</section>
+
+<section class="section" id="qrPage" style="display:none">
+  <h1>Payment & Confirmation</h1>
+
+  <div class="booking" style="text-align:center">
+    <div class="summary-box">
+      <h3>Your Booking Details</h3>
+      <p id="summaryText"></p>
+    </div>
+
+    <img src="i1.png" height="150">
+    <div class="pay-icons">
+      <img src="i2.png" height="40">
+      <img src="i3.png" height="40">
+      <img src="i4.png" height="40">
+    </div>
+
+    <p>Show payment receipt at gym desk</p>
+
+    <button onclick="goTop()" class="top-btn">⬆ Go to Top</button>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>About Company</h3>
+      <p>Power-Core GYM provides world-class fitness training.</p>
+    </div>
+    <div>
+      <h3>Address</h3>
+      <p>Rajkot - 360002</p>
+    </div>
+    <div>
+      <h3>Timing</h3>
+      <p>5:00 AM - 8:00 PM</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>+91 8849586698</p>
+    </div>
+    <div>
+      <h3>Owner</h3>
+      <p>Dhruv AshvinBhai Bhanderi</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
